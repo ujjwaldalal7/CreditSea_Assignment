@@ -13,6 +13,14 @@ export const uploadAndParseXML = async (req, res) => {
   } catch (err) {
     console.error(err);
     res.status(500).json({ success: false, message: "Failed to process XML" });
+  } finally {
+    fs.unlink(req.file.path, (err) => {
+      if (err) {
+        console.error("Error deleting temporary file:", err); 
+      } else {
+        console.log(`Successfully deleted temp file: ${req.file.path}`);
+      }
+    });
   }
 };
 
