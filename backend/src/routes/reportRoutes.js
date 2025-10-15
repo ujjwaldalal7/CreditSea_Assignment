@@ -9,4 +9,3 @@ router.post("/upload", upload.single("file"), uploadAndParseXML);
 router.get("/", getReports);
 
 export default router;
- 
