@@ -41,8 +41,10 @@ npm install
 Create a .env file inside backend/ and add:
 
 PORT=5000
-MONGO_URI="mongodb+srv://default_user:user1234@asscreditsea.wiqxkhc.mongodb.net/creditsea"
+MONGO_URI="mongodb+srv://<username>:<passcode>@asscreditsea.wiqxkhc.mongodb.net/creditsea"
 
+//username:default_user
+//passcode:user1234
 
 Then start the backend:
 npm start
